@@ -15,17 +15,47 @@ Content-Type: application/json
 ###
 
 GET  http://127.0.0.1:8000/api/expenses/
-Authorization: Basic django:Password@123
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1MzkxNTAxLCJpYXQiOjE3NDUzOTEyMDEsImp0aSI6ImYzNjkzOTU4ZThjYTQ5ZDY5NzdhNGYyMzRlOTcwNTU0IiwidXNlcl9pZCI6Mn0.B_oZwRtRZJsatA8Jm8ip0oKkYT17Fi1WKjlgIMUxMXc
 
 
 # api call for adiing new request
 ###
 POST http://127.0.0.1:8000/api/expenses/
 Content-Type: application/json
-Authorization: Basic python:Password@123
+Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ1MzkxNTAxLCJpYXQiOjE3NDUzOTEyMDEsImp0aSI6ImYzNjkzOTU4ZThjYTQ5ZDY5NzdhNGYyMzRlOTcwNTU0IiwidXNlcl9pZCI6Mn0.B_oZwRtRZJsatA8Jm8ip0oKkYT17Fi1WKjlgIMUxMXc
 
 {
     "title":"breakfast",
     "amount":120,
     "category":"food"
 }
+
+
+# api call for fetching token pair
+###
+POST http://127.0.0.1:8000/api/token/
+Content-Type: application/json
+
+{
+    "username":"python",
+    "password":"Password@123"
+}
+
+
+# token refresh
+###
+POST http://127.0.0.1:8000/api/token/refresh/
+Content-Type: application/json
+
+{
+    "refresh":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0NTQ3NzkzNSwiaWF0IjoxNzQ1MzkxNTM1LCJqdGkiOiJmMGFmMjJlMzEzMjY0MmNkOWRjZDZlOGU0Mzc2OGI3ZSIsInVzZXJfaWQiOjJ9.IK6qRk585cTOea5SZW4lLLdmD0qOJpZTSOIi__3EPeM"
+}
+
+# API 
+# monday (front end)
+
+# 1project 3-4weeks
+# 
+#gunicorn 
+# pythonanywhere
+#
