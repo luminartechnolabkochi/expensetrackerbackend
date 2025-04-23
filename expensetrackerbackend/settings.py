@@ -88,10 +88,10 @@ WSGI_APPLICATION = 'expensetrackerbackend.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'expense_db',
-        'USER': 'root',
+        'NAME': 'luminartechnolab$expense_db',
+        'USER': 'luminartechnolab',
         'PASSWORD': 'Password@123',
-        'HOST':'localhost',
+        'HOST':'luminartechnolab.mysql.pythonanywhere-services.com',
         'PORT':'3306',
     }
 }
