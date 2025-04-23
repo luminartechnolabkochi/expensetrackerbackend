@@ -1,0 +1,31 @@
+# api call for creating user account
+
+###
+POST http://127.0.0.1:8000/api/register/
+Content-Type: application/json
+
+{
+    "username":"python",
+    "email":"python@gmail.com",
+    "password":"Password@123",
+    "phone":"9446760965"
+}
+
+# api call for listing all expenses
+###
+
+GET  http://127.0.0.1:8000/api/expenses/
+Authorization: Basic django:Password@123
+
+
+# api call for adiing new request
+###
+POST http://127.0.0.1:8000/api/expenses/
+Content-Type: application/json
+Authorization: Basic python:Password@123
+
+{
+    "title":"breakfast",
+    "amount":120,
+    "category":"food"
+}
